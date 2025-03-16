@@ -1,0 +1,195 @@
+
+body{
+  background-color: rgb(226, 226, 226);
+}
+
+
+/*Header*/
+
+header{
+  background-color: black;
+  color: white;
+  padding: 1vh;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  justify-content: flex-end;
+  font: 1em sans-serif;
+  padding: 1.5vh;
+}
+
+header a{
+  margin: 1vh;
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+
+header .hamburger div{
+  background-color: white;
+  width: 30px;
+  height: 2px;
+  margin: 5px;
+}
+
+header a:hover{
+  border-style: dotted;
+}
+
+@media only screen and (max-width: 500px){
+  header .hamburger{
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    gap: 15px;
+}
+  .active{
+    display: flex;
+  }
+}
+
+/*Section: General Characteristic*/
+
+section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/*TopSection*/
+.TopSection{
+  margin: 10px;
+}
+
+.TopSection .Message{
+  width:inherit;
+  height:inherit;
+  text-align: center;
+  padding-top: 20px;
+  font-size: x-large;
+  margin: 10px;
+}
+
+.ProfilePicture{
+  width: 300px;
+  height: 350px;
+  border-radius: 2rem 2rem;
+  margin-top: 30px;
+}
+
+.ProfilePicture img{
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+
+/*Section Two*/
+
+.content{
+  margin: 20px 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.content label{
+  width: max-content;
+  height: max-content;
+  border-radius: 50%;
+  background-color: rgb(57, 57, 57);
+  padding: 50px;
+  color: white;
+  margin: 10px;
+}
+.content label:hover{
+  transition-duration: 5ms;
+  margin: 0px;
+  font-size: x-large;
+  padding: 20px;
+  color: #333;
+  background-color: white;
+  border-style: groove;
+  text-decoration: underline;
+}
+
+/*Section Three*/
+
+.SectionTitle{
+  text-align: center;
+  margin: 20px;
+  text-decoration-line: overline;
+}
+
+.SectionTitle:hover{
+  text-decoration-line: underline;
+}
+
+/*Tasks*/
+
+.Tasks{
+  width: 53vh;
+  height: max-content;
+  background-color: rgb(57, 57, 57);
+  border-radius: 1rem;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+}
+
+.Tasks img{
+  display: block;
+  width: inherit; 
+  min-height: 200px;
+  margin-top: 20px;
+}
+
+.Tasks h1,p{
+  text-align: center;
+}
+
+.Tasks a{
+  color: white;
+}
+
+.Tasks:hover{
+  background-color: black;
+  width: 55vh;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: white;
+  background-color: black;
+  min-height: 20vh;
+  text-align: center;
+  padding-top: 8vh;
+  opacity: 0.8;
+}
+
+/*Tasks*/
