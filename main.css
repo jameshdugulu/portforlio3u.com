@@ -192,4 +192,20 @@ footer{
   opacity: 0.8;
 }
 
-/*Tasks*/
+/*About Page*/
+
+main{
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
