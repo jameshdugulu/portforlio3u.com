@@ -3,9 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="code.js" defer></script>
 </head>
 <body>
-  
+  <header>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="menu" id="menu">
+      <a href="Project.html">Projects</a>
+      <a href="Contact.html">Contact</a>
+      <a href="Home.html">Home</a>
+      <a href="About.html">About</a>
+    </ul>
+  </header>
+
+  <section class="contact-section">
+    <h1 class="SectionTitle">Get in Touch</h1>
+
+    <form action="#" method="POST" class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p>You can also reach me via:</p>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+      <!-- Add other social media or contact methods as needed -->
+    </div>
+  </section>
+
+  <footer>
+    <span>
+      @copyright James Hallie Dugulu <br>
+      3u power it
+    </span>
+  </footer>
 </body>
 </html>

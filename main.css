@@ -4,9 +4,13 @@ body{
 }
 
 *:hover{
+  /*
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  Applying these on hover to all elements is generally disruptive.
+  Consider applying box-shadow more selectively to interactive elements.
+  */
   box-shadow: #333 5px 5px 5px;
 }
 
@@ -129,10 +133,10 @@ section{
   margin: 10px;
 }
 .content label:hover{
-  transition-duration: 5ms;
-  margin: 0px;
-  font-size: x-large;
-  padding: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transform: scale(1.1);
+  font-size: x-large; /* Keep if desired, or adjust */
+  padding: 45px; /* Adjusted padding slightly due to scale */
   color: #333;
   background-color: white;
   border-style: groove;
@@ -154,33 +158,53 @@ section{
 /*Tasks*/
 
 .Tasks{
-  width: 53vh;
+  width: 90%; /* Percentage based width */
+  max-width: 400px; /* Max width to prevent it from becoming too large */
   height: max-content;
   background-color: rgb(57, 57, 57);
   border-radius: 1rem;
-  padding: 5px;
-  margin: 5px;
+  padding: 15px; /* Increased padding a bit */
+  margin: 10px; /* Increased margin a bit */
   color: white;
+  display: flex; /* Added flex for better internal alignment */
+  flex-direction: column; /* Stack items vertically */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
 }
 
 .Tasks img{
   display: block;
-  width: inherit; 
-  min-height: 200px;
-  margin-top: 20px;
+  width: 100%; /* Make image responsive within the card */
+  max-height: 250px; /* Max height for images */
+  object-fit: cover; /* Ensure image covers the area well */
+  border-radius: 0.5rem; /* Rounded corners for image */
+  margin-top: 0; /* Adjusted from 20px as padding is on .Tasks now */
+  margin-bottom: 10px; /* Space below image */
 }
 
-.Tasks h1,p{
+.Tasks h1, .Tasks p{ /* Applied to .Tasks p as well */
   text-align: center;
+  margin-bottom: 10px; /* Spacing for text elements */
+}
+
+.Tasks ul {
+  margin-top: auto; /* Pushes the list and link to the bottom if content is short */
+  padding-left: 20px; /* Indent list items */
 }
 
 .Tasks a{
   color: white;
+  text-decoration: none; /* Remove underline by default */
+  padding: 8px 0; /* Add some padding for easier clicking */
+  display: inline-block; /* Allows padding */
+}
+
+.Tasks a:hover {
+  text-decoration: underline; /* Underline on hover */
 }
 
 .Tasks:hover{
   background-color: black;
-  width: 55vh;
+  transform: scale(1.03); /* Scale effect on hover */
 }
 
 footer{
@@ -196,4 +220,72 @@ footer{
   text-align: center;
   padding-top: 8vh;
   opacity: 0.8;
+}
+
+/* Contact Page Specific Styles */
+.contact-section {
+  padding: 20px;
+  margin-top: 80px; /* Increased slightly to ensure clearance from fixed header */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 180px); /* Ensure it takes significant height if content is short */
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 600px;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+  padding: 25px; /* Slightly increased padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1); /* Slightly adjusted shadow */
+}
+.contact-form label {
+  margin-bottom: 8px; /* Increased margin */
+  font-weight: bold;
+  color: #333; /* Ensure label text color */
+}
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 20px; /* Increased margin */
+  padding: 12px; /* Increased padding */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Ensure padding doesn't expand element width */
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff; /* Highlight focus */
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); /* Bootstrap-like focus */
+}
+.contact-form button {
+  padding: 12px 18px; /* Increased padding */
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em; /* Slightly larger font */
+  transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+  background-color: #555;
+}
+.contact-info {
+  text-align: center;
+  color: #333; /* Ensure text color for this section */
+}
+.contact-info p {
+  margin: 12px 0; /* Increased margin */
+  font-size: 1.1em;
+}
+.contact-info a {
+  color: #007bff; /* Standard link color */
+  text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
 }
